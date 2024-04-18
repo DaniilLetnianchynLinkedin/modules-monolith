@@ -1,5 +1,6 @@
 package com.modules.module.shop.core
 
+import com.modules.module.shop.contracts.Command
 import com.modules.module.shop.core.handler.CrossModuleHandler
 import com.modules.module.shop.core.handler.Handler
 import org.slf4j.LoggerFactory
@@ -9,8 +10,8 @@ import org.springframework.web.client.RestTemplate
 @Service
 class Mediator(
     private val restTemplate: RestTemplate,
-    private val commands: MutableList<Command<IPayload, IResult>>,
-    private val handlers: MutableList<Handler<IPayload, IResult>>
+    private val commands: List<Command<IPayload, IResult>>,
+    private val handlers: List<Handler<IPayload, IResult>>
 ) {
 
     fun send(command: Command<IPayload, IResult>, payload: IPayload?): IResult? {
