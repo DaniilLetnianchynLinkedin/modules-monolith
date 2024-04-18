@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: module-shop
+  profiles:
+    active: product
+
+
+module:
+  config:
+    user:
+      address: http://localhost:8082

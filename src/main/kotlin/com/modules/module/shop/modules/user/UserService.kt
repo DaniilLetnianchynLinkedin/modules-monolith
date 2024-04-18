@@ -1,6 +1,6 @@
 package com.modules.module.shop.modules.user
 
-import com.modules.module.shop.modules.user.command.result.UserDetailsResult
+import com.modules.module.shop.contracts.user.UserDetailsResult
 import org.springframework.stereotype.Service
 
 @Service

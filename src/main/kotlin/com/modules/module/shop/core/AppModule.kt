@@ -1,6 +1,6 @@
 package com.modules.module.shop.core
 
-enum class Module {
+enum class AppModule {
     USER,
     ORDER
 }

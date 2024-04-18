@@ -1,4 +1,4 @@
-package com.modules.module.shop
+package com.modules.module.shop.config
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
