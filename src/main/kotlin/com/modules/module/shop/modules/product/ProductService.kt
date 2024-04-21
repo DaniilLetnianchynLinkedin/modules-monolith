@@ -18,7 +18,7 @@ class ProductService(
 
     fun getProductSuggestions(userId: Long): ProductsSuggestionResposne {
         val userIncome = getUserIncomePercentage(userId, SALLARY_PERCENTAGE)
-        return productRepository.getProductsByPriceLower(userIncome).let { products ->
+        return productRepository.findAllByPriceIsLessThan(userIncome).let { products ->
             ProductsSuggestionResposne(
                 products = products.toDto()
             )
