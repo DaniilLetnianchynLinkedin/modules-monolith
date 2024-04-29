@@ -1,6 +1,6 @@
 package com.modules.module.shop.config
 
-import com.modules.module.shop.contracts.user.GetUserIncomeCommand
+import com.modules.module.shop.contracts.user.GetUserIncomeQuery
 import com.modules.module.shop.core.IPayload
 import com.modules.module.shop.core.IResult
 import com.modules.module.shop.core.handler.CrossModuleHandler
@@ -27,7 +27,7 @@ class HandlerConfig {
     fun initHandler(
         @Value("\${module.config.user.address}") address: String
     ) = CrossModuleHandler<IPayload, IResult>(
-        type = GetUserIncomeCommand.name,
+        type = GetUserIncomeQuery.name,
         address = address
     )
 }

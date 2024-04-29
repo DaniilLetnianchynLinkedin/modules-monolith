@@ -10,7 +10,9 @@ spring:
     driverClassName: org.h2.Driver
   jpa:
     show-sql: true
-
+  h2:
+    console:
+      enabled: true
 module:
   config:
     user:

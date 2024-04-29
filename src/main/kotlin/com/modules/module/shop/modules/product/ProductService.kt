@@ -2,7 +2,7 @@ package com.modules.module.shop.modules.product
 
 import com.modules.module.shop.contracts.product.ProductDto
 import com.modules.module.shop.contracts.product.ProductsSuggestionResposne
-import com.modules.module.shop.contracts.user.GetUserIncomeCommand
+import com.modules.module.shop.contracts.user.GetUserIncomeQuery
 import com.modules.module.shop.contracts.user.GetUserIncomePayload
 import com.modules.module.shop.contracts.user.UserIncomeResult
 import com.modules.module.shop.core.Mediator
@@ -26,7 +26,7 @@ class ProductService(
     }
 
     private fun getUserIncomePercentage(userId: Long, percentage: Double): Double {
-        return mediator.getCommandByType(GetUserIncomeCommand.name)?.let { command ->
+        return mediator.getCommandByType(GetUserIncomeQuery.name)?.let { command ->
             val incomeResult = mediator.send(
                 command,
                 GetUserIncomePayload(userId)

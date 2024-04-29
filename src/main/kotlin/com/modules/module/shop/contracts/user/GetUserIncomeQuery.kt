@@ -4,7 +4,7 @@ import com.modules.module.shop.contracts.Command
 import org.springframework.stereotype.Component
 
 @Component
-class GetUserIncomeCommand<P: GetUserIncomePayload?, R: UserIncomeResult?>(
+class GetUserIncomeQuery<P: GetUserIncomePayload?, R: UserIncomeResult?>(
 ) : Command<GetUserIncomePayload, UserIncomeResult> {
     override val type: String = name
 
